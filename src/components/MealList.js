@@ -6,7 +6,7 @@ const MealList = () => {
 
   useEffect(() => {
     // Fetch meals from the backend API
-    axios.get('http://localhost:3001/meals') // Replace with your backend URL
+    axios.get('http://localhost:3001/meals') 
       .then((response) => {
         setMeals(response.data);
       })
@@ -24,7 +24,7 @@ const MealList = () => {
             <img src={meal.image} alt={meal.name} />
             <h3>{meal.name}</h3>
             <p>Price: ${meal.price}</p>
-            {/* Other meal information */}
+            
           </li>
         ))}
       </ul>
